@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36401.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleurMonster-APIv1", "ControleurMonster-APIv1\ControleurMonster-APIv1.csproj", "{1C85E644-A243-49FB-B135-D2CDFE5F4B25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLittleRPG_Test", "MyLittleRPG_Test\MyLittleRPG_Test.csproj", "{99865238-B852-465E-A4F9-143B64C454B4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C85E644-A243-49FB-B135-D2CDFE5F4B25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C85E644-A243-49FB-B135-D2CDFE5F4B25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C85E644-A243-49FB-B135-D2CDFE5F4B25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C85E644-A243-49FB-B135-D2CDFE5F4B25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99865238-B852-465E-A4F9-143B64C454B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99865238-B852-465E-A4F9-143B64C454B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99865238-B852-465E-A4F9-143B64C454B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99865238-B852-465E-A4F9-143B64C454B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C02E3B12-31AC-4748-A4A4-9E8E0E4DBE9C}
+	EndGlobalSection
+EndGlobal

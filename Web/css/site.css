@@ -1,0 +1,534 @@
+
+/* === THEME VARIABLES === */
+:root {
+  --bg: #ffffff;
+  --text: #0f172a;
+  --subtle: #f1f5f9;
+  --card: #ffffff;
+  --accent: #0d6efd;
+  --accent-contrast: #ffffff;
+  --tile-border: rgba(15, 23, 42, 0.2);
+}
+
+:root[data-theme="dark"] {
+  --bg: #0b1220;
+  --text: #e2e8f0;
+  --subtle: #0f172a;
+  --card: #0f172a;
+  --accent: #60a5fa;
+  --accent-contrast: #0b1220;
+  --tile-border: rgba(226, 232, 240, 0.25);
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.card, .modal-content {
+  background: var(--card);
+  color: var(--text);
+  border-color: var(--tile-border);
+}
+
+.btn-primary, .btn.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-contrast);
+}
+
+.badge.bg-secondary {
+  background: var(--subtle) !important;
+  color: var(--text) !important;
+  border: 1px solid var(--tile-border);
+}
+
+/* tile outline adapts to theme */
+.tuile.player-position {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 12px var(--accent);
+}
+
+/* theme toggle positioning (header right) */
+#themeToggleWrapper {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+}
+
+
+body {
+  background-color: #1d3557;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+header {
+  background-color: #457b9d;
+}
+
+/* === STYLES D'AUTHENTIFICATION === */
+.auth-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1d3557 0%, #457b9d 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.auth-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  margin: 1rem;
+}
+
+.auth-title {
+  color: #1d3557;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  color: #1d3557;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  padding: 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #457b9d;
+  box-shadow: 0 0 0 3px rgba(69, 123, 157, 0.1);
+}
+
+.btn {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary {
+  background: #457b9d;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: #3a6b8a;
+  transform: translateY(-2px);
+}
+
+.btn-success {
+  background: #4caf50;
+  color: white;
+}
+
+.btn-success:hover:not(:disabled) {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+.btn-link {
+  background: transparent;
+  color: #457b9d;
+  text-decoration: underline;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-link:hover {
+  color: #3a6b8a;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.auth-switch {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.auth-switch p {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border-left: 4px solid #c62828;
+  margin-top: 1rem;
+}
+
+.success-message {
+  background: #e8f5e8;
+  color: #2e7d32;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border-left: 4px solid #4caf50;
+  margin-top: 1rem;
+}
+
+/* Sidebar */
+#left-sidebar, #right-sidebar {
+  background-color: #2c5f8a;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+.sidebar-block {
+  background: #2a2a72;
+  color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.sidebar-block h5 {
+  color: #f1faee;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid #f1faee;
+  padding-bottom: 8px;
+}
+
+.sidebar-block p, .sidebar-block li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.sidebar-block .list-unstyled li {
+  padding: 4px 0;
+}
+
+.main-block {
+  background: #1d3557;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.tuile {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1e1e2f;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+  border: 2px solid #333;
+  font-size: 48px;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.carte {
+  display: grid;
+  justify-content: center; /* centre la grille horizontalement */
+  margin: 30px auto;
+}
+
+#carte {
+  display: grid;
+  justify-content: center; /* centre le tableau */
+  gap: 5px;
+}
+
+
+.tuile.herbe { background: #4caf50; }
+.tuile.eau { background: #2196f3; }
+.tuile.montagne { background: #795548; }
+.tuile.foret { background: #2e7d32; }
+.tuile.ville { background: #ff9800; }
+.tuile.route { background: #9e9e9e; }
+.tuile.inconnu { background: #212121; }
+
+/* === STYLES POUR LA POSITION DU JOUEUR === */
+.tuile.player-position {
+  border: 3px solid #FFD700 !important;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 0 3px 6px rgba(0,0,0,0.4);
+  animation: playerGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes playerGlow {
+  from {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6), 0 3px 6px rgba(0,0,0,0.4);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.9), 0 3px 6px rgba(0,0,0,0.4);
+  }
+}
+
+.tuile.player-position::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #FFD700, #FFA500, #FFD700);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+/* === STYLES POUR LES CASES HORS LIMITES === */
+.tuile.hors-limites {
+  background: linear-gradient(45deg, #2a2a2a 25%, #1a1a1a 25%, #1a1a1a 50%, #2a2a2a 50%, #2a2a2a 75%, #1a1a1a 75%);
+  background-size: 8px 8px;
+  border: 2px solid #444 !important;
+  cursor: not-allowed !important;
+  opacity: 0.6;
+  position: relative;
+}
+
+.tuile.hors-limites::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 3px,
+    rgba(255, 0, 0, 0.1) 3px,
+    rgba(255, 0, 0, 0.1) 6px
+  );
+  pointer-events: none;
+}
+
+.tuile.hors-limites:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* === CONTRÔLES DE MOUVEMENT === */
+.movement-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  width: 280px;
+  height: 210px;
+  margin: 0 auto;
+}
+
+.movement-btn {
+  width: 100%;
+  height: 100%;
+  min-height: 60px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px 6px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.movement-btn i {
+  margin-right: 5px;
+  font-size: 1rem;
+}
+
+.movement-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movement-btn:active {
+  transform: translateY(0);
+}
+
+/* Positionnement des boutons dans la grille */
+#btn-nord {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#btn-ouest {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#btn-actualiser {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+#btn-actualiser:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+#btn-est {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+#btn-sud {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+/* Responsive pour les petits écrans */
+@media (max-width: 768px) {
+  .movement-controls {
+    width: 200px;
+    height: 150px;
+  }
+  
+  .movement-btn {
+    min-height: 40px;
+    font-size: 0.75rem;
+  }
+  
+  .movement-btn i {
+    font-size: 0.8rem;
+  }
+}
+
+/* === STYLES DE LA LÉGENDE === */
+.legend-list {
+  margin: 0;
+  padding: 0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 4px 0;
+}
+
+.legend-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.legend-icon.danger-icon,
+.legend-icon.bounds-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  background: transparent;
+  border: none;
+}
+
+.legend-item span {
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+/* Effet hover pour les éléments de légende */
+.legend-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding-left: 8px;
+  transition: all 0.2s ease;
+}
+
+/* === STYLES DE LA TUILE SÉLECTIONNÉE === */
+.selected-tile-preview {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.selected-tile-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.selected-tile-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.selected-tile-details p {
+  margin-bottom: 4px;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+#selected-description {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+/* Thème */
+:root{--bg:#fff;--text:#0f172a;--subtle:#f1f5f9;--card:#fff;--accent:#0d6efd;--accent-contrast:#fff;--tile-border:rgba(15,23,42,.2);}
+:root[data-theme="dark"]{--bg:#0b1220;--text:#e2e8f0;--subtle:#0f172a;--card:#0f172a;--accent:#60a5fa;--accent-contrast:#0b1220;--tile-border:rgba(226,232,240,.25);}
+html,body{background:var(--bg);color:var(--text);}
+.card,.modal-content{background:var(--card);color:var(--text);border-color:var(--tile-border);}
+header{position:relative;}
+#themeToggleWrapper{position:absolute;top:12px;right:16px;z-index:1000;}
